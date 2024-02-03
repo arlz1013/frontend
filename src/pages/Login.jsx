@@ -1,32 +1,36 @@
 import '../styles/Login.scss'
 
+const Request = () => {
+
+}
 const Login = () => {
     return(
     <div className='Login'>
-        <body class="align">
-            <div class="grid">
-            <form action="https://httpbin.org/post" method="POST" class="form login">
-            <div class="form__field">
-                <label for="login__username"><svg class="icon">
-                    <use xlink:href="#icon-user"></use>
-                </svg><span class="hidden">Username</span></label>
-                <input autocomplete="username" id="login__username" type="text" name="username" class="form__input" placeholder="Username" required/>
+        <body className="align">
+            <div className="grid">
+            <form action="" method="POST" className="form login">
+            <div className="form__field">
+                <label htmlFor="login__username">
+                    <img src='./user.png' height={22.5} width={22.5}/>
+                <span className="hidden">Username</span></label>
+                <input autoComplete="username" id="login__username" type="text" name="username" className="form__input" placeholder="Username" required/>
             </div>
-            <div class="form__field">
-                <label for="login__password"><svg class="icon">
-                    <use xlink:href="#icon-lock"></use>
-                </svg><span class="hidden">Password</span></label>
-                <input id="login__password" type="password" name="password" class="form__input" placeholder="Password" required/>
+            <div className="form__field">
+                <label htmlFor="login__password">                   
+                    <img src='./padlock.png' height={22.5} width={22.5}/>
+                    <span className="hidden">Password</span>
+                </label>
+                <input id="login__password" type="password" name="password" className="form__input" placeholder="Password" required/>
             </div>
-            <div class="form__field">
+            <div className="form__field">
                 <input type="submit" value="Sign In"/>
             </div>
             </form>
-            <p class="text--center">Not a member? <a href="#">Sign up now</a> <svg class="icon">
-                <use xlink:href="#icon-arrow-right"></use>
+            <p className="text--center">Not a member? <a href="#">Sign up now</a> <svg className="icon">
+                
             </svg></p>
             </div>
-            <svg xmlns="http://www.w3.org/2000/svg" class="icons">
+            <svg xmlns="http://www.w3.org/2000/svg" className="icons">
             <symbol id="icon-arrow-right" viewBox="0 0 1792 1792">
             <path d="M1600 960q0 54-37 91l-651 651q-39 37-91 37-51 0-90-37l-75-75q-38-38-38-91t38-91l293-293H245q-52 0-84.5-37.5T128 1024V896q0-53 32.5-90.5T245 768h704L656 474q-38-36-38-90t38-90l75-75q38-38 90-38 53 0 91 38l651 651q37 35 37 90z" />
             </symbol>
