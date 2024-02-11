@@ -1,12 +1,10 @@
-import '../styles/NotFound.scss'
-
 const NotFound = () => {
     return (
-        <div  className='Notfound'>
-            <body>
-                <div title="404">404</div>  
-            </body>
-        </div>
+<div  className='Notfound'>
+    <div className="body">
+        <div title="404">404</div>  
+    </div>
+</div>
     );
 }
 

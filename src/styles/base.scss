@@ -1,0 +1,23 @@
+@use './components/Header.scss';
+@use './components/NotFound.scss';
+@use './components/Overlay.scss';
+@use './components/Footer.scss';
+@use './pages/Login.scss';
+@use './pages/start.scss';
+
+/*
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+*/
+@import './colors/Colors.scss' , './colors/fonts.scss';
+html {
+    box-sizing: border-box;
+    font-size: 100%;
+}
+
+body {
+    font-family: $bodyFontFamily $bodyFontFamilyFallback;
+    font-size: $bodyFontSize;
+    font-weight: $bodyFontWeight;
+  }

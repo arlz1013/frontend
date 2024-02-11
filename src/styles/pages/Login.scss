@@ -1,42 +1,17 @@
+@import '../colors/Colors.scss', '../colors/fonts.scss';
+
 .Login{
   // * Vars
-  $baseColor : #9f9b97;
-  
-  $htmlFontSize: 100%;
-  
-  $gridBackgroundColor: #F5F7F8;
-  $bodyColor: $baseColor;
-  $bodyFontFamily: "Open Sans";
-  $bodyFontFamilyFallback: sans-serif;
-  $bodyFontSize: 0.875rem;
-  $bodyFontWeight: 400;
-  $bodyLineHeight: 1.5;
 
-  $anchorColor: #45474B;
-  
-  $formGap: 0.875rem;
-
-  $loginBorderRadus: 0.25rem;
-  $loginColor: #45474B;
-
-  $loginInputBackgroundColor: #F2EFE5;
-  $loginInputHoverBackgroundColor: #E3E1D9;
-
-  $loginLabelBackgroundColor: #F0ECE5 ;
-
-  $loginSubmitBackgroundColor: #BFD8AF;
-  $loginSubmitColor: #45474B;
-  $loginSubmitHoverBackgroundColor: #D4E7C5;
-
-  
   .align {
     display: grid;
     place-items: center;
+    min-block-size: 100vh;
   }
 
   .grid {
     border-radius: 12px;
-    background-color: $gridBackgroundColor;
+    background-color: $Clr1;
     inline-size: 90%;
     margin-inline: auto;
     max-inline-size: 20rem;
@@ -54,47 +29,10 @@
     width: 1px;
   }
 
-  .icons {
-    display: none;
-  }
-
-  .icon {
-    block-size: 1em;
-    display: inline-block;
-    fill:   $baseColor;
-    inline-size: 1em;
-    vertical-align: middle;
-  }
-
   * {
     box-sizing: inherit;
   }
 
-  html {
-    box-sizing: border-box;
-    font-size: $htmlFontSize;
-  }
-
-  body {
-    color: $bodyColor;
-    font-family: $bodyFontFamily $bodyFontFamilyFallback;
-    font-size: $bodyFontSize;
-    font-weight: $bodyFontWeight;
-    line-height: $bodyLineHeight;
-    margin: 0;
-    min-block-size: 100vh;
-  }
-
-  a {
-    color: $anchorColor;
-    outline: 0;
-    text-decoration: none;
-  }
-
-  a:focus,
-  a:hover {
-    text-decoration: underline;
-  }
   input {
     background-image: none;
     border: 0;
@@ -133,7 +71,7 @@
 
 
   .login {
-    color: $loginColor;
+    color: $ClrDrk2;
   }
 
   .login label,
@@ -145,7 +83,7 @@
   }
 
   .login label {
-    background-color: $loginLabelBackgroundColor;
+    background-color: $Clr2;
     border-bottom-right-radius: 0;
     border-top-right-radius: 0;
     padding-inline: 1.25rem;
@@ -153,7 +91,7 @@
 
   .login input[type="password"],
   .login input[type="text"] {
-    background-color: $loginInputBackgroundColor;
+    background-color: $ClrLgh1;
     border-bottom-left-radius: 0;
     border-top-left-radius: 0;
   }
@@ -162,19 +100,19 @@
   .login input[type="password"]:hover,
   .login input[type="text"]:focus,
   .login input[type="text"]:hover {
-    background-color: $loginInputHoverBackgroundColor;
+    background-color: $ClrLgh2;
   }
 
   .login input[type="submit"] {
-    background-color: $loginSubmitBackgroundColor;
-    color: $loginSubmitColor;
+    background-color: $ClrGrn2  ;
+    color: $ClrLgh1;
     font-weight: 700;
     text-transform: uppercase;
   }
 
   .login input[type="submit"]:focus,
   .login input[type="submit"]:hover {
-    background-color: $loginSubmitHoverBackgroundColor;
+    background-color: $ClrGrn1;
   }
 
   /* modules/text.css */

@@ -1,0 +1,153 @@
+@import '../colors/Colors.scss';
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.min.css);
+.Header{
+  @mixin transition($trans...) {
+    -webkit-transition: $trans;
+    -moz-transition: $trans;
+    -ms-transition: $trans;
+    transition: $trans;
+  }
+  
+  @mixin noselect() {
+    -webkit-user-select: none;
+    -moz-user-select: none;     
+    -ms-user-select: none; 
+    -o-user-select: none;
+    user-select: none;   
+  }
+  
+  .accordion {
+    color: $Clr1; 
+    width: 100%;
+    .section {
+      width: 100%;
+      input[type='radio'] {
+        display: none;
+        &:checked {
+          & + label {
+            background: $Clr2;
+            &:before {
+              content: " ";
+              position: absolute;
+
+              height: 100%;
+              left: 0;
+            }
+          }
+          & ~ .content {
+            max-height: 300px; 
+            opacity: 1;
+            z-index: 10;
+            overflow-y: auto; 
+          }
+        }
+      }
+      label {
+        position: relative;
+        cursor: pointer;
+        padding: 10px 20px; 
+        display: table;
+        color: $ClrLgh1;
+        background: $Clr3;
+        width: 100%;
+        @include transition (background 0.3s ease-in-out);
+        @include noselect();
+        &:before {
+          content: " ";
+          width: 100%;
+          position: absolute;
+          left: 0;
+          top: 0;
+          height: 1px;
+ 
+        }
+        &:hover {
+          background: $Clr2;  
+
+        }
+        span {
+          display: table-cell;
+          vertical-align: middle;
+        }
+      }
+
+      .content {
+        max-height: 0;
+        @include transition(all 0.4s);
+        opacity: 0;
+        position: relative;
+        overflow-y: hidden; 
+      }  
+    }    
+  }
+  
+  // Custom styles
+  *, *:before, *:after {
+    -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+   }
+  .left-menu {
+    font-family: 'Quicksand' ;
+    background: $Clr1;
+    width: 200px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+  }
+  .accordion {
+    font-size: 14px;
+    .section {
+      .content {
+        padding: 0 15px;
+      }
+      input[type='radio'] {
+        display: none;
+        &:checked {
+          & ~ .content {
+            padding: 15px;    
+          }
+        }
+      }
+    }
+  }
+  ul {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    color: $ClrDrk1;
+    list-style: none; 
+    li {
+      padding: 10px; 
+      a {
+        font-size: 13px;
+        width: 15px;
+        margin-right: 15px;
+      }
+      a:visited{
+        color: $Clr2;
+      }
+      a:link{
+        color: $ClrDrk2;
+      }
+      &:hover {
+        cursor: pointer;
+        a {
+          color: $Clr3;  
+        }
+        span{
+          color: $Clr2;
+        }
+      }
+    }
+  }
+  .logo {
+    padding: 30px 10px;
+    width: 200px;
+    text-align: center;
+    color : $ClrDrk2;
+    font-size: 20px;
+    a {
+      font-size: 70px;
+      color: $Clr4;
+    }
+  }
+}

@@ -4,27 +4,24 @@ import { createBrowserRouter } from "react-router-dom";
 
 // * Pages
 import Login from "../pages/Login";
+import Start from "../pages/Start"
 
 // ? Load
-import Overlay from "../components/Overlay";
-import NotFound from "../components/NotFound";
-
+import Layout from "../layout/layout"
+import NotFound from "../components/NotFound"
 
 // ! Paths Settings
 const router = createBrowserRouter([
     {
         path: "/",
-        element: <Login/>
+        element: <Login/>,
+        errorElement: <NotFound/>
     },
     {
-        path : "/...",
-        element : <Overlay/>
+        path: "/home",
+        element: <Layout/>,
+        errorElement: <NotFound/>
     },
-    {
-        path: "*",
-        element: <NotFound/>,
-    },
-
 ]);
 
 export default router;
