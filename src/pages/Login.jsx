@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+
 import axios from 'axios';
 
 const Login = () => {
@@ -67,7 +68,7 @@ const Login = () => {
             required/>
         </div>
         <div className="form__field">
-            <input type="submit" disabled/>
+            <input type="submit" disabled={loading}/>
         </div>
         </form>
         </div>
