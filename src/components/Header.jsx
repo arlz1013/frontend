@@ -1,6 +1,6 @@
 const Header = () => {
     return (
-        <body>
+
 <div className="Header">
     <div className="header">
         <div className="left-menu">
@@ -47,7 +47,7 @@ const Header = () => {
     </div>
     
 </div>
-</body>
+
 );
 }
 
