@@ -16,7 +16,7 @@ const Layout = () => {
                 {isLoading && <Overlay />}
                 <Outlet />
             </main>
-            <Footer />
+            <Footer/>
         </div>
     );
 };

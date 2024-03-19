@@ -1,0 +1,16 @@
+@import '../colors/Colors.scss';
+.Footer{
+  display: grid;
+    footer {
+        padding: 1% 5%;
+        text-align:center;
+        background-color: $Clr4;
+        color: $Clr1;
+        
+        a {
+          color: $Clr2;
+          font-weight: 500;
+          text-decoration: none;
+        }
+      }
+}

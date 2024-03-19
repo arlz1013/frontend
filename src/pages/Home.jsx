@@ -1,4 +1,8 @@
 const Home = () => {
-
+    return(
+<div className="Home">
+    <h1>DashBoard</h1>
+</div>
+);
 }
-return Home 
+export default Home;

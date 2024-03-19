@@ -1,6 +1,7 @@
 @import '../colors/Colors.scss';
 @import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.min.css);
 .Header{
+  display: grid;
   @mixin transition($trans...) {
     -webkit-transition: $trans;
     -moz-transition: $trans;
@@ -123,16 +124,22 @@
         margin-right: 15px;
       }
       a:visited{
-        color: $Clr2;
+        color: $Clr3;
       }
       a:link{
-        color: $ClrDrk2;
+        color: $Clr3;
+      }
+      a:active{
+        color: $Clr2;
+      }
+      a:hover{
+        color: $Clr2;
+      }
+      a:focus{
+        color: $Clr2;
       }
       &:hover {
         cursor: pointer;
-        a {
-          color: $Clr3;  
-        }
         span{
           color: $Clr2;
         }

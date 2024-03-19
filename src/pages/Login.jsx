@@ -1,13 +1,37 @@
-
-
-import Verify from "../data/LoginVerifi";
+//import Verify from "../data/LoginVerifi";
+import React, { useState } from 'react';
+import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
+
+    const [credentials, setCredentials] = useState({ name: '', pasw: '' });
+    const navigate = useNavigate();
+
+    const handleChange = (e) => {
+      setCredentials({ ...credentials, [e.target.name]: e.target.value });
+    };
+  
+    const handleSubmit = async (e) => {
+      e.preventDefault();
+      try {
+        const response = await axios.post('http://localhost:8000/api/log/', credentials);
+        // Guardar el token JWT en el almacenamiento local o en el estado de la aplicación
+        localStorage.setItem('access_token', response.data.access);
+        // Redirigir al usuario a la página principal o al dashboard
+        navigate('/home');
+      } catch (error) {
+        console.error(error);
+        // Mostrar un mensaje de error
+      }
+    };
+  
+
     return(
 <div className='Login'>
     <div className="align">
         <div className="grid">
-        <form onSubmit={Verify} method="POST" className="form login">
+        <form onSubmit={handleSubmit} className="form login">
         <div className="form__field">
             <label htmlFor="login__username">
                 <img src='./user.png' height={22.5} width={22.5}/>
@@ -15,10 +39,11 @@ const Login = () => {
             <input 
             autoComplete="username" 
             type="text" 
-            name="username" 
+            name="name" 
             className="form__input" 
             placeholder="Username" 
-            id = "a"
+            value={credentials.name}
+            onChange={handleChange}
             required
             /> 
         </div>
@@ -29,10 +54,11 @@ const Login = () => {
             </label>
             <input 
             type="password" 
-            name="password" 
+            name="pasw" 
             className="form__input" 
             placeholder="Password" 
-            id = "b"
+            value={credentials.pasw}
+            onChange={handleChange}
             required
             />
         </div>

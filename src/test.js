@@ -1,8 +1,9 @@
 import CryptoJS from "crypto-js";
 
-const men = "Este es un mensaje Encriptado";
-const key = "ClaveSecreta123";
+var message = "Texto a encriptar";
+var secretKey = "miFraseSecreta";
 
-const menEnc = CryptoJS.AES.encrypt(men, key).toString();
+// Encriptar el mensaje
+var encryptedMessage = CryptoJS.AES.encrypt(message, secretKey).toString();
 
-console.log(menEnc)
+console.log("Mensaje encriptado: " + encryptedMessage);

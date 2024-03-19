@@ -1,9 +1,8 @@
 const Header = () => {
     return (
 
-<div className="Header">
-    <div className="header">
-        <div className="left-menu">
+<header className="Header">
+    <div className="left-menu">
         <div className="logo"><a className="fa fa-wrench"></a><br/>
             <div>Ferreteria</div>
         </div>
@@ -13,8 +12,8 @@ const Header = () => {
                 <label htmlFor="section-1"><span>Inicio</span></label>
                 <div className="content">
                     <ul>
-                    <li><a className="fa fa-tasks" href="/"></a><span>Bandeja</span></li>
-                    <li><a className="fa fa-calendar-o" href="/calendar"></a><span>Calendario</span></li>
+                    <li><a className="fa fa-tasks" href="/home"></a><span>Bandeja</span></li>
+                    <li><a className="fa fa-calendar-o" href="/home/cal"></a><span>Calendario</span></li>
                     <li><a className="fa fa-bell-o"></a><span>Notificaciones</span></li>
                     </ul>
                 </div>
@@ -24,7 +23,7 @@ const Header = () => {
                 <label htmlFor="section-2"> <span>Factura</span></label>
                 <div className="content">
                     <ul>
-                    <li><a className="fa fa-shopping-cart"></a><span>Nueva</span></li>
+                    <li><a className="fa fa-shopping-cart" href="/home/fac"></a><span>Nueva</span></li>
                     <li><a className="fa fa-folder"></a><span>Hitorial</span></li>
                     <li><a className="fa fa-money"></a><span>Caja</span></li>
                     
@@ -43,10 +42,8 @@ const Header = () => {
             </div>
             </div>
         </div>
-        </div>
     </div>
-    
-</div>
+</header>
 
 );
 }
